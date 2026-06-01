@@ -32,6 +32,8 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=sample-node-app-saurabh
+            -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
             -Dsonar.sources=.
             -Dsonar.exclusions=node_modules/**,tests/**
 
